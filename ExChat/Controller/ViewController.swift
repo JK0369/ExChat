@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        messages = getMockMessages()
+        messages = Mock.getMockMessages()
         addSubviews()
         makeConstraints()
     }

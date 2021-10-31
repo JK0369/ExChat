@@ -17,6 +17,7 @@
 		E0470767272E63A200048371 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0470766272E63A200048371 /* ChatMessageCell.swift */; };
 		E047076A272E6FCF00048371 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0470769272E6FCF00048371 /* String.swift */; };
 		E047076D272E8B0C00048371 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E047076C272E8B0C00048371 /* Mocks.swift */; };
+		E0470772272E982900048371 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0470771272E982900048371 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E0470766272E63A200048371 /* ChatMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		E0470769272E6FCF00048371 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		E047076C272E8B0C00048371 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		E0470771272E982900048371 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +102,12 @@
 		E0470762272E5BA500048371 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E0470759272E5B9100048371 /* Info.plist */,
 				E047074B272E5B9000048371 /* AppDelegate.swift */,
 				E047074D272E5B9000048371 /* SceneDelegate.swift */,
 				E0470751272E5B9000048371 /* Main.storyboard */,
 				E0470754272E5B9100048371 /* Assets.xcassets */,
 				E0470756272E5B9100048371 /* LaunchScreen.storyboard */,
-				E0470759272E5B9100048371 /* Info.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -122,7 +124,7 @@
 		E0470768272E6FC100048371 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				E0470769272E6FCF00048371 /* String.swift */,
+				E0470770272E92E400048371 /* Extension */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -133,6 +135,15 @@
 				E047076C272E8B0C00048371 /* Mocks.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		E0470770272E92E400048371 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E0470769272E6FCF00048371 /* String.swift */,
+				E0470771272E982900048371 /* UIView.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0470772272E982900048371 /* UIView.swift in Sources */,
 				E047076A272E6FCF00048371 /* String.swift in Sources */,
 				E0470750272E5B9000048371 /* ViewController.swift in Sources */,
 				E0470767272E63A200048371 /* ChatMessageCell.swift in Sources */,

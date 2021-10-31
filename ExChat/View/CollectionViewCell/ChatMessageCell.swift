@@ -30,8 +30,16 @@ class ChatMessageCell: BaseCollectionViewCell {
         view.textColor = .black
         view.backgroundColor = .white
         view.layer.cornerRadius = 15.0
-        view.layer.masksToBounds = true
+        view.layer.masksToBounds = false
         view.isEditable = false
+        return view
+    }()
+
+    let profileImageView: UIImageView = {
+        let view = UIImageView(image: UIImage(named: "profile"))
+        view.layer.cornerRadius = view.bounds.width / 2
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.clear.cgColor
         return view
     }()
 
@@ -42,6 +50,10 @@ class ChatMessageCell: BaseCollectionViewCell {
         messaageTextView.translatesAutoresizingMaskIntoConstraints = false
         messaageTextView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         messaageTextView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+
+        contentView.addSubview(profileImageView)
+        profileImageView.translatesAutoresizingMaskIntoConstraints = false
+        profileImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8).isActive = true
     }
 
     private func bind() {
@@ -54,9 +66,15 @@ class ChatMessageCell: BaseCollectionViewCell {
         messaageTextView.widthAnchor.constraint(equalToConstant: estimatedFrame.width + 16).isActive = true
 
         if case .receive = model.chatType {
+            messaageTextView.backgroundColor = .systemBlue
+            profileImageView.isHidden = true
             messaageTextView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16).isActive = true
+            messaageTextView.addTipViewToRightBottom(with: messaageTextView.backgroundColor)
         } else {
-            messaageTextView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
+            messaageTextView.backgroundColor = .white
+            profileImageView.isHidden = false
+            messaageTextView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16 + profileImageView.bounds.width).isActive = true
+            messaageTextView.addTipViewToLeftTop(with: messaageTextView.backgroundColor)
         }
     }
 }
